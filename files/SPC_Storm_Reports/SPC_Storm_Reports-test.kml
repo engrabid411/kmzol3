@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Folder>
+  <name>SPC Storm Reports</name>
+  <open>1</open>
+  <description>
+The SPC Storm Reports KML/KMZ is experimental.  Adjust the time slider on top of the GoogleEarth display to view reports.  Please send feedback to http://www.spc.noaa.gov/misc/feedback.html
+  </description>
+  <NetworkLink>
+    <name><![CDATA[Today's Storm Reports]]></name>
+    <visibility>1</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/climo/reports/today.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <name><![CDATA[Yesterday's Storm Reports]]></name>
+    <visibility>1</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/climo/reports/yesterday.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+</Folder>
+</kml>

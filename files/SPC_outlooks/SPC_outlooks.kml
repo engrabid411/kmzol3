@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Folder>
+  <name>SPC Outlooks</name>
+  <NetworkLink>
+    <open>1</open>
+    <name>Current Day 1 Outlook</name>
+    <visibility>1</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/outlook/day1otlk.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 2 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/outlook/day2otlk.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 3 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/outlook/day3otlk.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 4 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/exper/day4-8/day4prob.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 5 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/exper/day4-8/day5prob.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 6 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/exper/day4-8/day6prob.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 7 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/exper/day4-8/day7prob.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+  <NetworkLink>
+    <open>0</open>
+    <name>Current Day 8 Outlook</name>
+    <visibility>0</visibility>
+    <refreshVisibility>1</refreshVisibility>
+    <Link>
+      <href>http://www.spc.noaa.gov/products/exper/day4-8/day8prob.kmz</href>
+      <refreshMode>onInterval</refreshMode>
+      <refreshInterval>600</refreshInterval>
+    </Link>
+  </NetworkLink>
+</Folder>
+</kml>

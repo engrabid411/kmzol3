@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/ol.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="map"></div>
+</body>
+</html>
+<script type="text/javascript" src="jszip/jszip-master/dist/jszip.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jszip-utils/dist/jszip-utils.js"></script>
+<script type="text/javascript" src="js/ol.js"></script>
+
+<script type="text/javascript">
+	
+	var map = new ol.Map({
+	  layers: [
+		new ol.layer.Tile({
+		  source: new ol.source.OSM()
+		})
+	  ],
+	  controls: ol.control.defaults({
+		attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+		  collapsible: false
+		})
+	  }),
+	  target: 'map',
+	  view: new ol.View({
+		center: [0, 0],
+		zoom: 2
+	  })
+	});
+	
+	var nestedKMZData = new Array();
+	var nestedKMZLinks = new Array();
+	var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+	function isEmpty(obj) {
+		if (obj == null)return true;
+		if (obj.length > 0)return false;
+		if (obj.length === 0)return true;
+		for (var key in obj) {
+			if (hasOwnProperty.call(obj, key)) return false;
+		}
+		return true;
+	}
+	var deferred = $.Deferred();
+	function readKMZ( url , callback){
+		
+		if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+			url = "http://" + url;
+		}
+		JSZipUtils.getBinaryContent(
+			'proxy/index.php?url='+url, 
+			function(err, data) {
+			  if(err) {
+				throw err; 
+			  }
+				
+			var zip = new JSZip(data);
+			for(f in zip.files){
+				var extractData = zip.files[f].asText(); 
+				
+				if (window.DOMParser) {
+				  parser=new DOMParser();
+				  xmlDoc=parser.parseFromString(extractData,"text/xml");
+				} else { // Internet Explorer
+				  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+				  xmlDoc.async=false;
+				  xmlDoc.loadXML(extractData); 
+				}
+				
+				
+				var NetworkLink = xmlDoc.getElementsByTagName('NetworkLink');
+				
+				if(isEmpty(NetworkLink) == true){
+					nestedKMZData.push(extractData);
+					deferred.resolve(nestedKMZData);
+				}
+				
+				
+				for(var L in NetworkLink){
+					
+					if(typeof NetworkLink[L] === "object" ){
+						deferred.notify();
+						var Link = NetworkLink[L].getElementsByTagName('Link');
+						var href = Link[0].getElementsByTagName('href')[0].innerHTML;
+						
+						readKMZ(href);
+						
+					}
+					
+				}
+				
+			}
+		}); 
+		return deferred.promise();
+	}
+
+	var data = readKMZ('www.spc.noaa.gov/climo/reports/SPC_Storm_Reports.kmz');
+	data.done(function(d){ console.log(d);});
+	
+	
+
+</script>

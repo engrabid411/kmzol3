@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Folder>
+<name>SPC Active Watches</name>
+<open>1</open>
+<description>
+<![CDATA[
+SPC Active Watches as of Wed Aug  5 02:48:02 UTC 2015
+Visit http://www.spc.noaa.gov/products/watch/ for more info.
+]]>
+</description>
+<name>SPC Active Watches</name>
+<description>
+<![CDATA[
+No Active Watches as of Wed Aug  5 02:48:02 UTC 2015
+]]>
+</description>
+</Folder>
+</kml>

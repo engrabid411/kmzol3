@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<ScreenOverlay>
+<name>NOAA/NWS/SPC Storm Reports</name>
+<visibility>1</visibility>
+<Icon>
+<href>http://www.weather.gov/images/xml_logo.gif</href>
+</Icon>
+<overlayXY x="0" y="-1" xunits="fraction" yunits="fraction"/>
+<screenXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+</ScreenOverlay>
+
+<StyleMap id="tornado">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#tornado_n</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#tornado_h</styleUrl>
+  </Pair>
+</StyleMap>
+<Style id="tornado_n">
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.1</scale>
+    <Icon>
+      <href>http://www.spc.noaa.gov/misc/reports_kml/torn.png</href>
+    </Icon>
+  </IconStyle>
+  <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+<Style id="tornado_h">
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+    <href>http://www.spc.noaa.gov/misc/reports_kml/torn.png</href>
+    </Icon>
+  </IconStyle>
+    <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+
+<StyleMap id="wind">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#wind_n</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#wind_h</styleUrl>
+  </Pair>
+</StyleMap>
+<Style id="wind_n">
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.1</scale>
+    <Icon>
+      <href>http://www.spc.noaa.gov/misc/reports_kml/wind.png</href>
+    </Icon>
+  </IconStyle>
+  <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+<Style id="wind_h">
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+    <href>http://www.spc.noaa.gov/misc/reports_kml/wind.png</href>
+    </Icon>
+  </IconStyle>
+    <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+
+<StyleMap id="strong_wind">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#strongwind_n</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#strongwind_h</styleUrl>
+  </Pair>
+</StyleMap>
+<Style id="strongwind_n">
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.1</scale>
+    <Icon>
+      <href>http://www.spc.noaa.gov/misc/reports_kml/strongwind.png</href>
+    </Icon>
+  </IconStyle>
+  <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+<Style id="strongwind_h">
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+    <href>http://www.spc.noaa.gov/misc/reports_kml/strongwind.png</href>
+    </Icon>
+  </IconStyle>
+    <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+
+<StyleMap id="hail">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#hail_n</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#hail_h</styleUrl>
+  </Pair>
+</StyleMap>
+<Style id="hail_n">
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.1</scale>
+    <Icon>
+      <href>http://www.spc.noaa.gov/misc/reports_kml/hail.png</href>
+    </Icon>
+  </IconStyle>
+  <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+<Style id="hail_h">
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+    <href>http://www.spc.noaa.gov/misc/reports_kml/hail.png</href>
+    </Icon>
+  </IconStyle>
+    <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+
+<StyleMap id="large_hail">
+  <Pair>
+    <key>normal</key>
+    <styleUrl>#largehail_n</styleUrl>
+  </Pair>
+  <Pair>
+    <key>highlight</key>
+    <styleUrl>#largehail_h</styleUrl>
+  </Pair>
+</StyleMap>
+<Style id="largehail_n">
+  <LabelStyle>
+    <scale>0</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.1</scale>
+    <Icon>
+      <href>http://www.spc.noaa.gov/misc/reports_kml/largehail.png</href>
+    </Icon>
+  </IconStyle>
+  <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+<Style id="largehail_h">
+  <LabelStyle>
+    <scale>1</scale>
+  </LabelStyle>
+  <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+    <href>http://www.spc.noaa.gov/misc/reports_kml/largehail.png</href>
+    </Icon>
+  </IconStyle>
+    <BalloonStyle>
+    <text>$[description]</text>
+  </BalloonStyle>
+</Style>
+
+<Folder>
+  <name>SPC Storm Reports KML Info</name>
+  <open>1</open>
+  <visibility>1</visibility>
+  <description>
+    <![CDATA[
+      <html><body>
+      <table width="250px"><tr><td colspan="2">
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png" alt="NOAA/NWS Logo"><br />
+      <p>
+      The NOAA/NWS/SPC Storm Reports KML is experimental.<br />
+      Adjust the time slider on top of the GoogleEarth display to view reports.<br />
+      Please send feedback to <a href="http://www.spc.noaa.gov/misc/feedback.html">www.spc.noaa.gov/misc/feedback.html</a><br />
+      NOTE: Storm Reports data are preliminary and unofficial.<br />
+      For official reports, go to <a href="http://www4.ncdc.noaa.gov/cgi-win/wwcgi.dll?wwEvent~Storms">NCDC Storm Events Database</a><br />
+      <img src="http://www.spc.noaa.gov/misc/reports_kml/torn.png" alt="Torndado Marking">Tornado Reports<br />
+      <img src="http://www.spc.noaa.gov/misc/reports_kml/wind.png" alt="Wind Marking">Wind Reports<br />
+      <img src="http://www.spc.noaa.gov/misc/reports_kml/strongwind.png" alt="High Wind Marking">High Wind Reports (65KT +)<br />
+      <img src="http://www.spc.noaa.gov/misc/reports_kml/hail.png" alt="Hail Marking">Hail Reports<br />
+      <img src="http://www.spc.noaa.gov/misc/reports_kml/largehail.png" alt="Large Hail Marking">Large Hail Reports (2" dia. +)
+      </p>
+      </td></tr>
+      </body></html>
+    ]]>
+  </description>
+</Folder>
+<Folder>
+<name>SPC Tornado Reports 2015-08-04 1200Z - 2015-08-05 1159Z</name>
+<visibility>1</visibility>
+<open>0</open>
+</Folder>
+<Folder>
+<name>SPC Damaging Wind Reports 2015-08-04 1200Z - 2015-08-05 1159Z</name>
+<visibility>1</visibility>
+<open>0</open>
+<Placemark>
+<name>PEABODY</name>
+<styleUrl>#wind</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>PEABODY</b>&nbsp;Wind Report</h3>
+<p>
+<b>County, State:</b> ESSEX, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.53, <b>Lon.:</b> -70.93<br>
+<b>Time:</b> 2015-08-04  12:00 UTC<br>
+<b>Wind Speed:</b> Unknown<br>
+</p>
+<p>
+TREE AND WIRES DOWN ON WINONA STREET (BOX)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T12:00:00Z</begin>
+<end>2015-08-04T12:00:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -70.93,42.53,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>PEABODY</name>
+<styleUrl>#wind</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>PEABODY</b>&nbsp;Wind Report</h3>
+<p>
+<b>County, State:</b> ESSEX, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.53, <b>Lon.:</b> -70.93<br>
+<b>Time:</b> 2015-08-04  12:02 UTC<br>
+<b>Wind Speed:</b> Unknown<br>
+</p>
+<p>
+LOWELL STREET CLOSED DUE TO MULTIPLE TREES DOWN (BOX)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T12:02:00Z</begin>
+<end>2015-08-04T12:02:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -70.93,42.53,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WELLFLEET</name>
+<styleUrl>#wind</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>WELLFLEET</b>&nbsp;Wind Report</h3>
+<p>
+<b>County, State:</b> BARNSTABLE, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 41.94, <b>Lon.:</b> -70.03<br>
+<b>Time:</b> 2015-08-04  12:05 UTC<br>
+<b>Wind Speed:</b> Unknown<br>
+</p>
+<p>
+TREES AND WIRES DOWN COVER AT CHIPMAN WAY (BOX)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T12:05:00Z</begin>
+<end>2015-08-04T12:05:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -70.03,41.94,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>AMHERST</name>
+<styleUrl>#wind</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>AMHERST</b>&nbsp;Wind Report</h3>
+<p>
+<b>County, State:</b> HAMPSHIRE, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.38, <b>Lon.:</b> -72.52<br>
+<b>Time:</b> 2015-08-04  16:55 UTC<br>
+<b>Wind Speed:</b> Unknown<br>
+</p>
+<p>
+TREE ON TO HOUSE ON FLAT HILLS ROAD (BOX)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T16:55:00Z</begin>
+<end>2015-08-04T16:55:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -72.52,42.38,0</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>SPC Hail Reports 2015-08-04 1200Z - 2015-08-05 1159Z</name>
+<visibility>1</visibility>
+<open>0</open>
+<Placemark>
+<name>VALATIE</name>
+<styleUrl>#large_hail</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>VALATIE</b>&nbsp;Hail Report</h3>
+<p>
+<b>County, State:</b> COLUMBIA, NY<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.41, <b>Lon.:</b> -73.68<br>
+<b>Time:</b> 2015-08-04  16:40 UTC<br>
+<b>Hail Size:</b> 2 IN. DIA.<br>
+</p>
+<p>
+(ALY)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T16:40:00Z</begin>
+<end>2015-08-04T16:40:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -73.68,42.41,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>1 NNW LAKEWOOD</name>
+<styleUrl>#hail</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>1 NNW LAKEWOOD</b>&nbsp;Hail Report</h3>
+<p>
+<b>County, State:</b> BERKSHIRE, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.46, <b>Lon.:</b> -73.23<br>
+<b>Time:</b> 2015-08-04  17:20 UTC<br>
+<b>Hail Size:</b> 1 IN. DIA.<br>
+</p>
+<p>
+HAIL AT INTERSECTION OF DALTON AVE AND WESTMINSTER AVE (ALY)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T17:20:00Z</begin>
+<end>2015-08-04T17:20:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -73.23,42.46,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>ATHOL</name>
+<styleUrl>#hail</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>ATHOL</b>&nbsp;Hail Report</h3>
+<p>
+<b>County, State:</b> WORCESTER, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.6, <b>Lon.:</b> -72.23<br>
+<b>Time:</b> 2015-08-04  17:25 UTC<br>
+<b>Hail Size:</b> 1 IN. DIA.<br>
+</p>
+<p>
+(BOX)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T17:25:00Z</begin>
+<end>2015-08-04T17:25:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -72.23,42.6,0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>WINDSOR</name>
+<styleUrl>#hail</styleUrl>
+<description>
+<![CDATA[
+<html><body>
+<table width="250px"><tr><td colspan="2">
+<h3><b>WINDSOR</b>&nbsp;Hail Report</h3>
+<p>
+<b>County, State:</b> BERKSHIRE, MA<br>&nbsp;&nbsp;(marker location is approximate)<br>
+<b>Lat.:</b> 42.51, <b>Lon.:</b> -73.06<br>
+<b>Time:</b> 2015-08-04  17:30 UTC<br>
+<b>Hail Size:</b> 1 IN. DIA.<br>
+</p>
+<p>
+(ALY)
+</p>
+<hr>
+</td></tr>
+<tr><td align="left">
+<p>For more info, see NOAA's<br>National Weather Service<br><a href="http://www.spc.noaa.gov/climo/online/">Local Storm Reports</a></p>
+</td>
+<td align="right"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/US-NationalWeatherService-Logo.svg/64px-US-NationalWeatherService-Logo.svg.png"></td>
+</tr>
+</table>
+</body></html>
+]]>
+</description>
+<TimeSpan>
+<begin>2015-08-04T17:30:00Z</begin>
+<end>2015-08-04T17:30:00Z</end>
+</TimeSpan>
+<Point>
+<coordinates> -73.06,42.51,0</coordinates>
+</Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>
